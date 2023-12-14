@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zach's DevOps Testing Page</title>
-    <style>
-        body {
-            background-color: white; /* Sets the background color to white */
-            color: black; /* Sets the text color to black */
-            font-family: Arial, sans-serif; /* Uses Arial font for the text */
+    <title>Driving Eligibility Checker</title>
+    <script>
+        function checkEligibility() {
+            var age = document.getElementById("age").value;
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            if (age >= 18) {
+                document.getElementById("result").innerHTML = firstName + " " + lastName + ", you are qualified to drive.";
+            } else {
+                document.getElementById("result").innerHTML = firstName + " " + lastName + ", you are not qualified to drive.";
+            }
         }
-        h1 {
-            color: navy; /* Sets the color of the heading */
-        }
-        img {
-            display: block; /* Centers the image on the page */
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%; /* Adjusts the image width */
-        }
-    </style>
+    </script>
 </head>
 <body>
-
-    <h1>Welcome Zach, This is my DevOps Testing Page!</h1>
-    <img src="PCDvops.jpg" alt="DevOps Image">
-    <p>Here you'll find all sorts of experiments and tests related to DevOps. It's a continuous journey of discovery and innovation!</p>
-  
-
+    <h3>Driving Eligibility Checker</h3>
+    <form>
+        First Name: <input type="text" id="firstName"><br>
+        Last Name: <input type="text" id="lastName"><br>
+        Age: <input type="number" id="age"><br>
+        <input type="button" value="Check Eligibility" onclick="checkEligibility()">
+    </form>
+    <p id="result"></p>
 </body>
 </html>
