@@ -2,6 +2,35 @@
 <html>
 <head>
     <title>Driving Eligibility Checker</title>
+    <style>
+        body {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .left {
+            float: left;
+            width: 50%;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .right {
+            float: right;
+            width: 50%;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .center {
+            clear: both;
+            text-align: center;
+        }
+    </style>
     <script>
         function checkEligibility() {
             var age = document.getElementById("age").value;
@@ -18,12 +47,14 @@
 </head>
 <body>
     <h3>Driving Eligibility Checker</h3>
-    <form>
-        First Name: <input type="text" id="firstName"><br>
-        Last Name: <input type="text" id="lastName"><br>
+    <div class="input-group">
+        <div class="left">First Name: <input type="text" id="firstName"></div>
+        <div class="right">Last Name: <input type="text" id="lastName"></div>
+    </div>
+    <div class="center">
         Age: <input type="number" id="age"><br>
         <input type="button" value="Check Eligibility" onclick="checkEligibility()">
-    </form>
+    </div>
     <p id="result"></p>
 </body>
 </html>
